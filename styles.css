@@ -1,0 +1,244 @@
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: none;
+  color: white;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6); /* translucent dark background */
+  color: white;
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.searchBox input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  width: 250px;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s;
+}
+
+.searchBox input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchBox input:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.searchBox button {
+ /* From Uiverse.io by barisdogansutcu */ 
+ 
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.searchBox button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+ .searchBox button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px; /* Adds space around the entire container */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.weather {
+  margin: 10px 0;
+}
+
+.minmaxContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.cardContainer {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.city {
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 1.2px;
+  color: white;
+}
+
+.weather {
+  font-weight: 500;
+  font-size: 0.7em;
+  letter-spacing: 1.2px;
+  color: rgb(197, 197, 197);
+}
+
+.temp {
+  font-size: 1.8em;
+  color: white;
+}
+
+.minmaxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.min,
+.max {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: 4px;
+}
+
+.max {
+  align-items: flex-start;
+  border-left: 2px solid white;
+}
+
+.maxHeading,
+.minHeading {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: white;
+}
+
+.maxTemp,
+.minTemp {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: rgb(197, 197, 197);
+}
+
+.cardContainer::before {
+  width: 100px;
+  height: 100px;
+  content: "";
+  position: absolute;
+  background-color: rgb(144, 161, 255);
+  z-index: -1;
+  border-radius: 50%;
+  left: 100px;
+  top: 50px;
+  transition: all 1s;
+}
+
+.cardContainer:hover::before {
+  transform: translate(-50px, 50px);
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
